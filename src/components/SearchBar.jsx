@@ -32,7 +32,10 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchRecipes: async query => {
-      const result = await axios.post("/api/recipes", { query: query });
+      const result = await axios.post(
+        "https://leftovers-staging.herokuapp.com/api/recipes",
+        { query: query }
+      );
       dispatch({
         type: "FETCH_RECIPES",
         data: result.data.hits
