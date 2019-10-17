@@ -1,9 +1,13 @@
 .App {
-  text-align: center;
+  background-color: #373d48;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+  pointer-events: none;
 }
 
 .App-header {
@@ -13,10 +17,51 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.hero {
+  background-image: url("./assets/landingpage.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 120vh;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero__row {
+  width: 50%;
+}
+
+.hero__helptext {
+  margin-top: 5px;
+}
+
+.hero__sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.hero__menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.hero__menu p {
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.hero__searchbar {
+  margin-top: -10px;
+}
+
+.search__input {
+  border: none;
 }
